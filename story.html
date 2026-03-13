@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Our Story — SHINKO OFFICIAL</title>
+    <meta name="description" content="The story behind SHINKO OFFICIAL. Born from the streets, crafted with intention, built for those who define their own identity." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <link rel="icon" type="image/png" href="images/shinko-icon.png" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="page-transition" id="page-transition"></div>
+
+    <nav id="main-nav" class="nav nav--scrolled">
+      <a href="index.html" class="nav__logo"><img src="images/shinko-icon.png" alt="SHINKO" class="nav__logo-icon" />SHINKO OFFICIAL</a>
+      <ul class="nav__links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="collection.html">Collection</a></li>
+        <li><a href="new-arrival.html">New Arrival</a></li>
+        <li><a href="lookbook.html">Lookbook</a></li>
+        <li><a href="story.html" class="nav--active">Story</a></li>
+        <li>
+          <a href="cart.html" class="nav__cart" id="nav-cart">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/>
+            </svg>
+            <span class="nav__cart-badge" id="cart-badge">0</span>
+          </a>
+        </li>
+      </ul>
+      <button id="nav-toggle" class="nav__burger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+    </nav>
+
+    <div id="mobile-menu" class="mobile-menu">
+      <ul class="mobile-menu__links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="collection.html">Collection</a></li>
+        <li><a href="new-arrival.html">New Arrival</a></li>
+        <li><a href="lookbook.html">Lookbook</a></li>
+        <li><a href="story.html">Story</a></li>
+        <li><a href="cart.html">Cart</a></li>
+      </ul>
+    </div>
+
+    <main class="story-page">
+      <!-- Story Hero -->
+      <div class="story-page__hero">
+        <div class="story-page__hero-bg">
+          <img src="images/brand-story-bg.png" alt="SHINKO Brand Story" />
+        </div>
+        <div class="story-page__hero-overlay"></div>
+        <div class="story-page__hero-content">
+          <span class="browse-hero__label reveal-text" data-delay="0">OUR STORY</span>
+          <h1 class="browse-hero__title reveal-text" data-delay="200" style="font-size: clamp(2.5rem, 7vw, 5rem);">BORN FROM<br />THE STREETS</h1>
+          <div class="browse-hero__line reveal-text" data-delay="400"></div>
+        </div>
+      </div>
+
+      <!-- Story Content -->
+      <div class="story-page__content">
+        <div class="story-page__section scroll-reveal">
+          <h2>THE BEGINNING</h2>
+          <p>
+            SHINKO OFFICIAL was born from a simple belief: <strong>streetwear is more than clothing — it is identity.</strong>
+            Founded in 2024, we set out to create a label that speaks to those who refuse to blend in, who walk their own path,
+            and who understand that what you wear is a statement of who you are.
+          </p>
+          <p>
+            From late-night sketches in a small studio to a full-fledged streetwear label, every step of our journey has been guided
+            by one principle — authenticity above all.
+          </p>
+        </div>
+
+        <div class="story-page__img scroll-reveal--scale">
+          <img src="images/lookbook-1.png" alt="SHINKO Studio" loading="lazy" />
+        </div>
+
+        <div class="story-page__section scroll-reveal">
+          <h2>THE VISION</h2>
+          <p>
+            We don't follow trends. We define them. Every piece in the SHINKO collection is designed with intention — merging
+            <strong>urban culture, minimal aesthetics, and uncompromising quality.</strong> From the weight of our fabrics to the
+            precision of every stitch, we obsess over the details so you don't have to.
+          </p>
+          <p>
+            Our design language is rooted in the streets but elevated through craftsmanship. Dark tones, bold silhouettes, and
+            purposeful construction — this is streetwear with substance.
+          </p>
+        </div>
+
+        <div class="story-page__img scroll-reveal--scale" data-delay="100">
+          <img src="images/lookbook-2.png" alt="SHINKO Process" loading="lazy" />
+        </div>
+
+        <div class="story-page__section scroll-reveal">
+          <h2>THE COMMUNITY</h2>
+          <p>
+            SHINKO is more than a brand — it's a movement. Our community is made up of creators, artists, musicians, and visionaries
+            who share a common belief: <strong>your identity is yours to define.</strong>
+          </p>
+          <p>
+            Through exclusive drops, collaborative campaigns, and immersive events, we bring together a global tribe united by
+            a love for authentic streetwear and self-expression.
+          </p>
+        </div>
+
+        <div class="story-page__img scroll-reveal--scale" data-delay="100">
+          <img src="images/lookbook-3.png" alt="SHINKO Community" loading="lazy" />
+        </div>
+
+        <div class="story-page__section scroll-reveal">
+          <h2>THE FUTURE</h2>
+          <p>
+            We're just getting started. SHINKO OFFICIAL is building towards a future where premium streetwear is accessible,
+            sustainable, and unapologetically bold. Every season, we push boundaries. Every collection, we redefine expectations.
+          </p>
+          <p>
+            <strong>This is SHINKO. Define your identity.</strong>
+          </p>
+        </div>
+      </div>
+    </main>
+
+    <!-- Statement -->
+    <div class="statement statement--solid">
+      <p class="statement__text scroll-reveal">DEFINE YOUR IDENTITY</p>
+    </div>
+
+    <div class="section-divider"></div>
+
+    <footer class="footer">
+      <div class="footer__top">
+        <div class="footer__brand">
+          <h2 class="footer__logo">SHINKO OFFICIAL</h2>
+          <p class="footer__tagline">DEFINE YOUR IDENTITY</p>
+        </div>
+        <div class="footer__links">
+          <div class="footer__col"><h4>SHOP</h4><a href="collection.html">Collection</a><a href="new-arrival.html">New Arrival</a><a href="cart.html">Cart</a></div>
+          <div class="footer__col"><h4>BRAND</h4><a href="story.html">Our Story</a><a href="lookbook.html">Lookbook</a><a href="#">Campaigns</a></div>
+          <div class="footer__col"><h4>HELP</h4><a href="#">Size Guide</a><a href="#">Shipping</a><a href="#">Returns</a><a href="#">Contact</a></div>
+        </div>
+      </div>
+      <div class="footer__divider"></div>
+      <div class="footer__bottom">
+        <p>&copy; 2026 SHINKO OFFICIAL. All rights reserved.</p>
+        <div class="footer__social">
+          <a href="#" aria-label="Instagram"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5" /><circle cx="12" cy="12" r="5" /><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none" /></svg></a>
+          <a href="#" aria-label="Twitter / X"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4l6.5 8L4 20h2l5.5-6.8L16 20h4l-6.8-8.5L20 4h-2l-5.2 6.3L9 4H4z" /></svg></a>
+          <a href="#" aria-label="TikTok"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 12a4 4 0 1 0 4 4V4c1 2.5 3.5 4 6 4" /></svg></a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

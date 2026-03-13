@@ -1,0 +1,317 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SHINKO OFFICIAL — Define Your Identity</title>
+    <meta
+      name="description"
+      content="SHINKO OFFICIAL — Premium streetwear for those who define their own identity. Explore our latest collections, lookbooks, and drops."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/png" href="images/shinko-icon.png" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Page Transition Overlay -->
+    <div class="page-transition" id="page-transition"></div>
+
+    <!-- ========== NAVIGATION ========== -->
+    <nav id="main-nav" class="nav">
+      <a href="index.html" class="nav__logo"><img src="images/shinko-icon.png" alt="SHINKO" class="nav__logo-icon" />SHINKO OFFICIAL</a>
+      <ul class="nav__links">
+        <li><a href="index.html" class="nav--active">Home</a></li>
+        <li><a href="collection.html">Collection</a></li>
+        <li><a href="new-arrival.html">New Arrival</a></li>
+        <li><a href="lookbook.html">Lookbook</a></li>
+        <li><a href="story.html">Story</a></li>
+        <li>
+          <a href="cart.html" class="nav__cart" id="nav-cart">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/>
+              <line x1="3" y1="6" x2="21" y2="6"/>
+              <path d="M16 10a4 4 0 01-8 0"/>
+            </svg>
+            <span class="nav__cart-badge" id="cart-badge">0</span>
+          </a>
+        </li>
+      </ul>
+      <button id="nav-toggle" class="nav__burger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu" class="mobile-menu">
+      <ul class="mobile-menu__links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="collection.html">Collection</a></li>
+        <li><a href="new-arrival.html">New Arrival</a></li>
+        <li><a href="lookbook.html">Lookbook</a></li>
+        <li><a href="story.html">Story</a></li>
+        <li><a href="cart.html">Cart</a></li>
+      </ul>
+    </div>
+
+    <!-- ========== HERO SECTION ========== -->
+    <section id="hero" class="hero">
+      <div class="hero__bg">
+        <img src="images/hero.png" alt="SHINKO Campaign" />
+        <div class="hero__overlay"></div>
+      </div>
+      <div class="hero__content">
+        <p class="hero__pre reveal-text" data-delay="0">SS26 COLLECTION</p>
+        <h1 class="hero__title">
+          <span class="reveal-text" data-delay="200">SHINKO</span>
+          <span class="reveal-text" data-delay="400">OFFICIAL</span>
+        </h1>
+        <p class="hero__tagline reveal-text" data-delay="600">
+          DEFINE YOUR IDENTITY
+        </p>
+        <a href="collection.html" class="hero__cta reveal-text" data-delay="800"
+          >SHOP COLLECTION</a
+        >
+      </div>
+      <div class="hero__scroll-indicator">
+        <span>SCROLL</span>
+        <div class="hero__scroll-line"></div>
+      </div>
+    </section>
+
+    <!-- ========== STATEMENT ========== -->
+    <div class="statement">
+      <p class="statement__text scroll-reveal">DEFINE YOUR IDENTITY</p>
+    </div>
+
+    <!-- ========== NEW DROP COLLECTION ========== -->
+    <section id="new-drop" class="section new-drop">
+      <div class="section__header scroll-reveal">
+        <span class="section__label">001 — NEW DROP</span>
+        <h2 class="section__title">LATEST<br />COLLECTION</h2>
+      </div>
+      <div class="product-grid">
+        <a href="product.html?id=shadow-hoodie" class="product-card scroll-reveal" data-delay="0">
+          <div class="product-card__image">
+            <img src="images/product-hoodie.png" alt="Shadow Hoodie" loading="lazy" />
+          </div>
+          <div class="product-card__info">
+            <h3>SHADOW HOODIE</h3>
+            <p>IDR 1.250.000</p>
+          </div>
+        </a>
+        <a href="product.html?id=core-tee" class="product-card scroll-reveal" data-delay="150">
+          <div class="product-card__image">
+            <img src="images/product-tshirt.png" alt="Core Tee" loading="lazy" />
+          </div>
+          <div class="product-card__info">
+            <h3>CORE TEE</h3>
+            <p>IDR 450.000</p>
+          </div>
+        </a>
+        <a href="product.html?id=tactical-cargo" class="product-card scroll-reveal" data-delay="300">
+          <div class="product-card__image">
+            <img src="images/product-cargo.png" alt="Tactical Cargo" loading="lazy" />
+          </div>
+          <div class="product-card__info">
+            <h3>TACTICAL CARGO</h3>
+            <p>IDR 980.000</p>
+          </div>
+        </a>
+        <a href="product.html?id=noir-bomber" class="product-card scroll-reveal" data-delay="450">
+          <div class="product-card__image">
+            <img src="images/product-bomber.png" alt="Noir Bomber" loading="lazy" />
+          </div>
+          <div class="product-card__info">
+            <h3>NOIR BOMBER</h3>
+            <p>IDR 1.680.000</p>
+          </div>
+        </a>
+      </div>
+      <div style="text-align:center; margin-top:48px;" class="scroll-reveal" data-delay="600">
+        <a href="collection.html" class="hero__cta">BROWSE ALL</a>
+      </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- ========== LOOKBOOK ========== -->
+    <section id="lookbook" class="section lookbook">
+      <div class="section__header scroll-reveal">
+        <span class="section__label">002 — LOOKBOOK</span>
+        <h2 class="section__title">SS26<br />CAMPAIGN</h2>
+      </div>
+      <div class="lookbook__grid">
+        <div class="lookbook__item lookbook__item--large scroll-reveal--scale">
+          <img src="images/lookbook-1.png" alt="Lookbook Campaign 1" loading="lazy" class="parallax-img" />
+          <div class="lookbook__overlay-text"><span>URBAN IDENTITY</span></div>
+        </div>
+        <div class="lookbook__item scroll-reveal--right" data-delay="200">
+          <img src="images/lookbook-2.png" alt="Lookbook Campaign 2" loading="lazy" class="parallax-img" />
+          <div class="lookbook__overlay-text"><span>SHADOW SERIES</span></div>
+        </div>
+        <div class="lookbook__item scroll-reveal--right" data-delay="400">
+          <img src="images/lookbook-3.png" alt="Lookbook Campaign 3" loading="lazy" class="parallax-img" />
+          <div class="lookbook__overlay-text"><span>NIGHT PROTOCOL</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== STATEMENT ========== -->
+    <div class="statement statement--solid">
+      <p class="statement__text scroll-reveal">BUILT FOR THE STREETS</p>
+    </div>
+
+    <!-- ========== BRAND STORY ========== -->
+    <section id="story" class="section story">
+      <div class="story__bg parallax-bg">
+        <img src="images/brand-story-bg.png" alt="Brand Story Background" loading="lazy" />
+      </div>
+      <div class="story__content">
+        <span class="section__label scroll-reveal">003 — OUR STORY</span>
+        <blockquote class="story__quote scroll-reveal" data-delay="200">
+          <p>"Streetwear is more<br />than clothing.<br /><strong>It is identity.</strong>"</p>
+        </blockquote>
+        <p class="story__body scroll-reveal" data-delay="400">
+          Born from the streets, SHINKO OFFICIAL is a premium label for those
+          who refuse to blend in. Every piece is crafted with intention —
+          merging urban culture, minimal design, and uncompromising quality. We
+          don't follow trends. We define them.
+        </p>
+      </div>
+    </section>
+
+    <!-- ========== MARQUEE ========== -->
+    <div class="marquee">
+      <div class="marquee__track">
+        <span>SHINKO OFFICIAL</span><span>★</span>
+        <span>DEFINE YOUR IDENTITY</span><span>★</span>
+        <span>SS26 COLLECTION</span><span>★</span>
+        <span>PREMIUM STREETWEAR</span><span>★</span>
+        <span>SHINKO OFFICIAL</span><span>★</span>
+        <span>DEFINE YOUR IDENTITY</span><span>★</span>
+        <span>SS26 COLLECTION</span><span>★</span>
+        <span>PREMIUM STREETWEAR</span><span>★</span>
+      </div>
+    </div>
+
+    <!-- ========== FEATURED PRODUCTS ========== -->
+    <section id="featured" class="section featured">
+      <div class="section__header scroll-reveal">
+        <span class="section__label">004 — FEATURED</span>
+        <h2 class="section__title">BEST<br />SELLERS</h2>
+      </div>
+      <div class="featured__scroll-container">
+        <div class="featured__track">
+          <article class="featured__card scroll-reveal" data-delay="0">
+            <div class="featured__card-image">
+              <img src="images/product-hoodie.png" alt="Shadow Hoodie" loading="lazy" />
+            </div>
+            <div class="featured__card-info"><h3>SHADOW HOODIE</h3><span>IDR 1.250.000</span></div>
+          </article>
+          <article class="featured__card scroll-reveal" data-delay="100">
+            <div class="featured__card-image">
+              <img src="images/product-bomber.png" alt="Noir Bomber" loading="lazy" />
+            </div>
+            <div class="featured__card-info"><h3>NOIR BOMBER</h3><span>IDR 1.680.000</span></div>
+          </article>
+          <article class="featured__card scroll-reveal" data-delay="200">
+            <div class="featured__card-image">
+              <img src="images/product-cap.png" alt="Core Cap" loading="lazy" />
+            </div>
+            <div class="featured__card-info"><h3>CORE CAP</h3><span>IDR 320.000</span></div>
+          </article>
+          <article class="featured__card scroll-reveal" data-delay="300">
+            <div class="featured__card-image">
+              <img src="images/product-bag.png" alt="Tactical Sling" loading="lazy" />
+            </div>
+            <div class="featured__card-info"><h3>TACTICAL SLING</h3><span>IDR 580.000</span></div>
+          </article>
+          <article class="featured__card scroll-reveal" data-delay="400">
+            <div class="featured__card-image">
+              <img src="images/product-cargo.png" alt="Tactical Cargo" loading="lazy" />
+            </div>
+            <div class="featured__card-info"><h3>TACTICAL CARGO</h3><span>IDR 980.000</span></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- ========== COMMUNITY / NEWSLETTER ========== -->
+    <section id="community" class="section community">
+      <div class="community__content scroll-reveal">
+        <span class="section__label">005 — COMMUNITY</span>
+        <h2 class="community__title">JOIN THE<br />SHINKO<br />COMMUNITY</h2>
+        <p class="community__subtitle">Be the first to access exclusive drops, campaigns, and events.</p>
+        <form id="newsletter-form" class="community__form" autocomplete="off">
+          <div class="community__input-group">
+            <input type="email" id="newsletter-email" placeholder="YOUR EMAIL" required />
+            <button type="submit">SUBSCRIBE</button>
+          </div>
+          <p id="newsletter-msg" class="community__msg"></p>
+        </form>
+      </div>
+    </section>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="footer">
+      <div class="footer__top">
+        <div class="footer__brand">
+          <h2 class="footer__logo">SHINKO OFFICIAL</h2>
+          <p class="footer__tagline">DEFINE YOUR IDENTITY</p>
+        </div>
+        <div class="footer__links">
+          <div class="footer__col">
+            <h4>SHOP</h4>
+            <a href="collection.html">Collection</a>
+            <a href="new-arrival.html">New Arrival</a>
+            <a href="cart.html">Cart</a>
+          </div>
+          <div class="footer__col">
+            <h4>BRAND</h4>
+            <a href="story.html">Our Story</a>
+            <a href="lookbook.html">Lookbook</a>
+            <a href="#">Campaigns</a>
+          </div>
+          <div class="footer__col">
+            <h4>HELP</h4>
+            <a href="#">Size Guide</a>
+            <a href="#">Shipping</a>
+            <a href="#">Returns</a>
+            <a href="#">Contact</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer__divider"></div>
+      <div class="footer__bottom">
+        <p>&copy; 2026 SHINKO OFFICIAL. All rights reserved.</p>
+        <div class="footer__social">
+          <a href="#" aria-label="Instagram">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <rect x="2" y="2" width="20" height="20" rx="5" /><circle cx="12" cy="12" r="5" />
+              <circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none" />
+            </svg>
+          </a>
+          <a href="#" aria-label="Twitter / X">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M4 4l6.5 8L4 20h2l5.5-6.8L16 20h4l-6.8-8.5L20 4h-2l-5.2 6.3L9 4H4z" />
+            </svg>
+          </a>
+          <a href="#" aria-label="TikTok">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M9 12a4 4 0 1 0 4 4V4c1 2.5 3.5 4 6 4" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
