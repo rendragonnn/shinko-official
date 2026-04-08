@@ -1,87 +1,55 @@
-<div align="center">
+# 🖤 SHINKO OFFICIAL — Premium Streetwear Website
 
-# 🔥 SHINKO OFFICIAL
+![SHINKO OFFICIAL](https://img.shields.io/badge/SHINKO-OFFICIAL-c8ff00?style=for-the-badge&labelColor=060606)
+![React](https://img.shields.io/badge/React-19-61DAFB?style=flat-square&logo=react&logoColor=white)
+![Vite](https://img.shields.io/badge/Vite-8-646CFF?style=flat-square&logo=vite&logoColor=white)
+![Framer Motion](https://img.shields.io/badge/Framer_Motion-12-FF0055?style=flat-square&logo=framer&logoColor=white)
 
-### _DEFINE YOUR IDENTITY_
-
-**Premium Streetwear Brand Website — Built with Pure HTML, CSS & JavaScript**
-
-[![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/HTML)
-[![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/CSS)
-[![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+> **⚠️ DISCLAIMER:** This website is a **concept / portfolio project** and is **not** a real e-commerce store. All products, prices, and brand elements shown are fictional and for demonstration purposes only. No real transactions can be made.
 
 ---
 
-**A cinematic, immersive streetwear brand website featuring 15+ dynamic animations,
-particle systems, 3D interactions, and a full e-commerce shopping experience.**
+## ✨ Overview
 
-[Live Demo](#) · [Features](#-features) · [Pages](#-pages) · [Tech Stack](#-tech-stack)
+SHINKO OFFICIAL is a premium streetwear brand concept website built as a modern React Single Page Application. It features a dark, high-fashion aesthetic with cinematic animations, interactive product pages, and an editorial lookbook experience.
 
-</div>
-
----
-
-## ✨ Features
-
-### 🎬 Cinematic Visual Effects
-
-- **Particle System** — Floating red particles with dynamic connection lines
-- **3D Product Card Tilt** — Cards respond to mouse movement with realistic perspective
-- **Film Grain Overlay** — Subtle noise texture for a premium cinematic look
-- **Smooth Cursor Glow** — Red radial glow follows cursor with LERP interpolation
-- **Glitch Text Effect** — RGB-split glitch animation on logo hover
-- **Split Text Animation** — Hero title reveals character-by-character with 3D rotation
-- **Floating Dots** — Atmospheric red particles rising from the hero section
-- **Shimmer Sweep** — Light sweep animation across sections
-- **Image Curtain Reveal** — Images reveal with sliding mask + zoom effect on scroll
-
-### 🛒 E-Commerce Functionality
-
-- **Shopping Cart** — Full cart system with localStorage persistence
-- **Add to Cart** — Size selection + add to cart with animated feedback
-- **Cart Management** — Quantity controls, remove items, order summary
-- **Checkout Flow** — Simulated checkout with confirmation animation
-- **Cart Badge** — Dynamic cart count with pulsing glow animation
-
-### 🎨 UI/UX Excellence
-
-- **Cinematic Page Loader** — Shimmer gradient "SHINKO" text on load
-- **Scroll Progress Bar** — Red gradient bar tracking scroll position
-- **Magnetic Buttons** — CTAs pull toward cursor on hover
-- **Page Transitions** — Smooth fade overlay between pages
-- **Scroll Reveal** — Multiple animation variants (fade-up, slide, scale)
-- **Parallax Effects** — Background images with depth scrolling
-- **Custom Scrollbar** — Branded scrollbar matching the dark theme
-- **Responsive Design** — Fully adaptive across all devices
+This project showcases advanced frontend development skills including scroll-driven animations, parallax effects, interactive galleries, and a cohesive dark-mode design system.
 
 ---
 
-## 📄 Pages
+## 🎨 Features
 
-| Page                | Description                                                                                                       |
-| ------------------- | ----------------------------------------------------------------------------------------------------------------- |
-| **Home**            | Fullscreen cinematic hero, latest collection, lookbook preview, brand story, featured products, community section |
-| **Collection**      | Full product catalog with 20+ items in a responsive grid                                                          |
-| **New Arrival**     | Latest drops with "NEW" badge filtering                                                                           |
-| **Lookbook**        | Editorial chapter grid (6 chapters) with hover effects                                                            |
-| **Lookbook Detail** | Individual chapter pages with hero, gallery, credits, prev/next navigation                                        |
-| **Story**           | Brand narrative with editorial images and scroll animations                                                       |
-| **Product Detail**  | Large product images, size selector, add to cart, product specs                                                   |
-| **Cart**            | Full shopping cart with quantity controls, order summary, checkout                                                |
+### Pages & Components
+- **Home** — Full-screen parallax hero, marquee ticker, product grid with scroll-reveal animations, brand quote section, and community newsletter signup
+- **Collection** — Category filter tabs (All / Tops / Bottoms / Outerwear / Accessories), product count, animated product cards
+- **New Arrival** — Cinematic hero with spotlight product, feature badges, and CTA banner
+- **Product Detail** — Split-layout with sticky product image, accordion sections (Description, Material & Fabric, Size Chart, Care Instructions), auto-scroll on section click, related products
+- **Lookbook** — Editorial chapter-based gallery with fullscreen overlay, chapter descriptions, per-image captions, thumbnail navigation, keyboard support (← → Esc)
+- **Our Story** — Full-screen parallax hero, brand manifesto, split image + values layout, vertical timeline with milestones, cinematic quote
+- **Contact** — Brand logo card, contact info grid, functional contact form with focus states
+- **Cart** — Full cart management with quantity controls, order summary
+
+### Design & UX
+- 🌑 **Dark Premium Aesthetic** — `#060606` background with `#c8ff00` neon lime accent
+- ✨ **Framer Motion Animations** — Scroll-reveal, parallax, accordion open/close, page transitions
+- 🎯 **Smart Navigation** — Auto scroll-to-top on route change, accordion auto-scroll on click
+- 📱 **Responsive Design** — Fluid typography with `clamp()`, adaptive grid layouts
+- 🔤 **Premium Typography** — Poppins font family
+- 🛒 **Cart System** — Persistent cart with localStorage
+- ⚠️ **Disclaimer Banner** — Fixed bottom banner clarifying this is a concept project
 
 ---
 
-## 🛠 Tech Stack
+## 🛠️ Tech Stack
 
-| Technology             | Purpose                                                         |
-| ---------------------- | --------------------------------------------------------------- |
-| **HTML5**              | Semantic structure & SEO                                        |
-| **CSS3**               | Custom properties, animations, grid, flexbox, responsive design |
-| **Vanilla JavaScript** | DOM manipulation, cart logic, particle system, scroll effects   |
-| **Google Fonts**       | Poppins typeface family                                         |
-| **LocalStorage**       | Cart data persistence                                           |
-
-> **Zero dependencies. Zero frameworks. Pure vanilla code.**
+| Technology | Purpose |
+|---|---|
+| **React 19** | UI framework |
+| **Vite 8** | Build tool & dev server |
+| **React Router** | Client-side routing |
+| **Framer Motion** | Animations & transitions |
+| **Lenis** | Smooth scrolling |
+| **CSS (Vanilla)** | Styling & design system |
 
 ---
 
@@ -89,81 +57,48 @@ particle systems, 3D interactions, and a full e-commerce shopping experience.**
 
 ```
 shinko-official/
-├── index.html              # Homepage
-├── collection.html         # Full collection catalog
-├── new-arrival.html        # New arrivals page
-├── lookbook.html           # Lookbook chapters grid
-├── lookbook-detail.html    # Individual chapter detail
-├── story.html              # Brand story page
-├── product.html            # Product detail page
-├── cart.html               # Shopping cart page
-├── style.css               # All styles + animations
-├── script.js               # All logic + effects
-├── README.md
-└── images/
-    ├── hero.png
-    ├── shinko-icon.png
-    ├── product-hoodie.png
-    ├── product-tshirt.png
-    ├── product-cargo.png
-    ├── product-bomber.png
-    ├── product-bag.png
-    ├── product-cap.png
-    ├── lookbook-1.png
-    ├── lookbook-2.png
-    ├── lookbook-3.png
-    └── brand-story-bg.png
+├── public/
+│   └── images/          # Product photos, lookbook, hero images
+├── src/
+│   ├── components/      # Navbar, Footer, Layout
+│   ├── context/         # CartContext (localStorage-based)
+│   ├── lib/             # data.js (products & lookbook data)
+│   ├── pages/           # All page components
+│   │   ├── Home.jsx
+│   │   ├── Collection.jsx
+│   │   ├── NewArrival.jsx
+│   │   ├── ProductDetail.jsx
+│   │   ├── Lookbook.jsx
+│   │   ├── Story.jsx
+│   │   ├── Contact.jsx
+│   │   ├── Cart.jsx
+│   │   └── ...
+│   ├── App.jsx          # Router & ScrollToTop
+│   ├── main.jsx         # Entry point
+│   └── index.css        # Global styles & design tokens
+└── package.json
 ```
 
 ---
 
-## 🚀 Getting Started
+## 📸 Preview
 
-1. **Clone the repository**
+| Home | Collection | Product Detail |
+|------|-----------|----------------|
+| Full-screen parallax hero with scroll animations | Category filter tabs with product grid | Split layout with accordion details |
 
-   ```bash
-   git clone https://github.com/rendragonnn/shinko-official.git
-   cd shinko-official
-   ```
-
-2. **Start a local server**
-
-   ```bash
-   # Python
-   python -m http.server 8080
-
-   # Or use VS Code Live Server extension
-   ```
-
-3. **Open in browser**
-   ```
-   http://localhost:8080
-   ```
+| Lookbook | Story | Contact |
+|----------|-------|---------|
+| Chapter-based editorial gallery | Timeline & brand manifesto | Logo card with contact form |
 
 ---
 
-## 🎯 Design Philosophy
+## 👤 Author
 
-- **Dark & Premium** — Black (#0B0B0B) base with white and red (#FF2A2A) accents
-- **Typography First** — Bold Poppins typeface with cinematic sizing
-- **Motion Design** — Every interaction has purpose and feedback
-- **Streetwear DNA** — Inspired by Japanese streetwear culture and urban aesthetics
-- **Performance** — Lightweight vanilla code, no heavy frameworks
+**Varrent Lionel** — [@rendragonnn](https://github.com/rendragonnn)
 
 ---
 
-## 📜 License
+## 📄 License
 
-This project is open source and available under the [MIT License](LICENSE).
-
----
-
-<div align="center">
-
-**SHINKO OFFICIAL © 2026**
-
-_Built with 🔥 by rendragonnn_
-
-**DEFINE YOUR IDENTITY.**
-
-</div>
+This project is for **portfolio / educational purposes only**. All brand names, logos, and product imagery are fictional. Not intended for commercial use.
