@@ -1,4 +1,4 @@
-# 🖤 SHINKO OFFICIAL — Premium Streetwear Website
+# SHINKO OFFICIAL — Premium Streetwear Website
 
 ![SHINKO OFFICIAL](https://img.shields.io/badge/SHINKO-OFFICIAL-c8ff00?style=for-the-badge&labelColor=060606)
 ![React](https://img.shields.io/badge/React-19-61DAFB?style=flat-square&logo=react&logoColor=white)
@@ -20,6 +20,7 @@ This project showcases advanced frontend development skills including scroll-dri
 ## 🎨 Features
 
 ### Pages & Components
+
 - **Home** — Full-screen parallax hero, marquee ticker, product grid with scroll-reveal animations, brand quote section, and community newsletter signup
 - **Collection** — Category filter tabs (All / Tops / Bottoms / Outerwear / Accessories), product count, animated product cards
 - **New Arrival** — Cinematic hero with spotlight product, feature badges, and CTA banner
@@ -30,6 +31,7 @@ This project showcases advanced frontend development skills including scroll-dri
 - **Cart** — Full cart management with quantity controls, order summary
 
 ### Design & UX
+
 - 🌑 **Dark Premium Aesthetic** — `#060606` background with `#c8ff00` neon lime accent
 - ✨ **Framer Motion Animations** — Scroll-reveal, parallax, accordion open/close, page transitions
 - 🎯 **Smart Navigation** — Auto scroll-to-top on route change, accordion auto-scroll on click
@@ -42,14 +44,14 @@ This project showcases advanced frontend development skills including scroll-dri
 
 ## 🛠️ Tech Stack
 
-| Technology | Purpose |
-|---|---|
-| **React 19** | UI framework |
-| **Vite 8** | Build tool & dev server |
-| **React Router** | Client-side routing |
+| Technology        | Purpose                  |
+| ----------------- | ------------------------ |
+| **React 19**      | UI framework             |
+| **Vite 8**        | Build tool & dev server  |
+| **React Router**  | Client-side routing      |
 | **Framer Motion** | Animations & transitions |
-| **Lenis** | Smooth scrolling |
-| **CSS (Vanilla)** | Styling & design system |
+| **Lenis**         | Smooth scrolling         |
+| **CSS (Vanilla)** | Styling & design system  |
 
 ---
 
@@ -78,18 +80,6 @@ shinko-official/
 │   └── index.css        # Global styles & design tokens
 └── package.json
 ```
-
----
-
-## 📸 Preview
-
-| Home | Collection | Product Detail |
-|------|-----------|----------------|
-| Full-screen parallax hero with scroll animations | Category filter tabs with product grid | Split layout with accordion details |
-
-| Lookbook | Story | Contact |
-|----------|-------|---------|
-| Chapter-based editorial gallery | Timeline & brand manifesto | Logo card with contact form |
 
 ---
 
