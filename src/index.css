@@ -1,6 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
 /* ===================================
-   SHINKO OFFICIAL — Premium Design System v2
-   Rebuilt for React SPA — Streetwear Aesthetic
+   SHINKO OFFICIAL — Luxury Brutalist System
+   Rebuilt for React SPA — High Fashion Aesthetic
+   (Adapted to Shinko's Neon Lime Branding)
    =================================== */
 
 /* ---------- CSS Reset ---------- */
@@ -23,6 +26,12 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* Base headings */
+h1, h2, h3, h4, h5, h6, .hero__title, .section__title, .statement__text, .footer__logo {
+  font-family: "Poppins", sans-serif;
+  text-transform: uppercase;
+}
+
 /* Subtle film grain overlay for premium texture */
 body::after {
   content: "";
@@ -31,7 +40,7 @@ body::after {
   z-index: 10000;
   pointer-events: none;
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
-  opacity: 0.025;
+  opacity: 0.035;
   mix-blend-mode: overlay;
 }
 
@@ -52,20 +61,76 @@ ul { list-style: none; }
   --accent-dim: #9abf00;
   --accent-glow: rgba(200, 255, 0, 0.15);
   --red: #ff3131;
-  --grey: #777;
-  --grey-light: #999;
+  --grey: #a8a29e;
+  --grey-light: #d6d3d1;
   --grey-dark: #2a2a2a;
   --grey-border: #1e1e1e;
   --section-pad: clamp(80px, 10vw, 160px);
   --side-pad: clamp(24px, 5vw, 80px);
   --transition: 0.5s cubic-bezier(0.16, 1, 0.3, 1);
-  --radius: 8px;
-  --radius-lg: 16px;
+  --radius: 0px; /* Brutalist sharp edges */
+  --radius-lg: 2px;
 }
 
 ::selection {
   background: var(--accent);
   color: var(--bg-primary);
+}
+
+/* ===================================
+   BRUTALIST LAYOUT UTILITIES
+   =================================== */
+.brutal-border {
+  border: 1px solid var(--grey-dark);
+}
+.brutal-border-accent {
+  border: 1px solid var(--accent);
+}
+.bento-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0;
+  border-top: 1px solid var(--grey-dark);
+  border-left: 1px solid var(--grey-dark);
+}
+.bento-cell {
+  border-right: 1px solid var(--grey-dark);
+  border-bottom: 1px solid var(--grey-dark);
+  position: relative;
+  overflow: hidden;
+  padding: var(--side-pad);
+}
+.bento-cell--dark {
+  background: var(--bg-primary);
+}
+.bento-cell--accent {
+  background: var(--accent);
+  color: var(--bg-primary);
+}
+.bento-cell--accent h1, .bento-cell--accent p {
+  color: var(--bg-primary);
+}
+.bento-cell--image {
+  padding: 0;
+}
+@media (min-width: 768px) {
+  .bento-grid--hero {
+    grid-template-columns: 1.5fr 1fr;
+    height: 100vh;
+  }
+}
+.marquee-brutal {
+  white-space: nowrap;
+  overflow: hidden;
+  box-sizing: border-box;
+  background: var(--accent);
+  color: var(--bg-primary);
+  border-top: 1px solid var(--grey-dark);
+  border-bottom: 1px solid var(--grey-dark);
+  padding: 12px 0;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
 }
 
 /* ===================================
@@ -80,16 +145,14 @@ ul { list-style: none; }
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 28px var(--side-pad);
-  transition: background 0.4s, padding 0.4s, border-color 0.4s;
-  border-bottom: 1px solid transparent;
+  padding: 24px var(--side-pad);
+  background: var(--bg-primary);
+  border-bottom: 2px solid var(--grey-dark);
+  transition: transform 0.4s;
 }
 .nav--scrolled {
-  background: rgba(6, 6, 6, 0.85);
-  backdrop-filter: blur(24px) saturate(1.8);
-  -webkit-backdrop-filter: blur(24px) saturate(1.8);
+  border-bottom: 2px solid var(--accent);
   padding: 16px var(--side-pad);
-  border-bottom: 1px solid var(--grey-border);
 }
 .nav__logo {
   font-size: 1.1rem;
@@ -123,42 +186,38 @@ ul { list-style: none; }
   font-weight: 600;
   letter-spacing: 0.25em;
   text-transform: uppercase;
-  position: relative;
-  padding-bottom: 4px;
-  transition: color 0.3s;
+  padding: 8px 16px;
+  border: 1px solid transparent;
+  transition: all 0.2s;
   color: var(--grey-light);
 }
-.nav__links a::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 0;
-  height: 2px;
+.nav__links a::after { display: none; }
+.nav__links a:hover,
+.nav__links a.nav--active {
   background: var(--accent);
-  transition: width 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  color: #000;
+  border: 1px solid var(--accent);
 }
-.nav__links a:hover { color: var(--white); }
-.nav__links a:hover::after,
-.nav__links a.nav--active::after { width: 100%; }
-.nav__links a.nav--active { color: var(--accent); }
 
 /* Cart icon */
 .nav__cart {
   position: relative;
   display: flex;
   align-items: center;
-  padding-bottom: 0 !important;
+  padding: 8px !important;
+  border: 1px solid var(--grey-dark) !important;
 }
-.nav__cart::after { display: none !important; }
-.nav__cart svg { transition: transform 0.3s; }
-.nav__cart:hover svg { transform: scale(1.15); }
+.nav__cart:hover {
+  background: var(--accent) !important;
+  color: #000 !important;
+}
 .nav__cart-badge {
   position: absolute;
   top: -8px;
   right: -10px;
-  background: var(--accent);
-  color: var(--bg-primary);
+  background: var(--bg-primary);
+  color: var(--accent);
+  border: 1px solid var(--accent);
   font-size: 0.5rem;
   font-weight: 800;
   width: 18px;
@@ -484,69 +543,63 @@ ul { list-style: none; }
 .product-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 20px;
+  gap: 0;
+  border-top: 1px solid var(--grey-dark);
+  border-left: 1px solid var(--grey-dark);
 }
 .product-card {
   background: var(--bg-card);
-  border: 1px solid var(--grey-border);
-  border-radius: var(--radius);
+  border-right: 1px solid var(--grey-dark);
+  border-bottom: 1px solid var(--grey-dark);
   overflow: hidden;
   cursor: pointer;
-  transition:
-    transform 0.5s cubic-bezier(0.16, 1, 0.3, 1),
-    border-color 0.5s,
-    box-shadow 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: all 0.3s;
   text-decoration: none;
   color: inherit;
   display: block;
   position: relative;
 }
 .product-card:hover {
-  transform: translateY(-6px);
+  background: var(--accent);
   border-color: var(--accent);
-  box-shadow:
-    0 24px 60px rgba(0, 0, 0, 0.5),
-    0 0 0 1px var(--accent),
-    0 0 60px var(--accent-glow);
 }
 .product-card__image {
   aspect-ratio: 3/4;
   overflow: hidden;
   position: relative;
   background: var(--bg-elevated);
+  border-bottom: 1px solid var(--grey-dark);
 }
 .product-card__image img {
-  transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+  filter: grayscale(0.2);
+  transition: filter 0.3s, transform 0.5s;
 }
 .product-card:hover .product-card__image img {
-  transform: scale(1.08);
+  filter: grayscale(0);
+  transform: scale(1.05);
 }
 
 /* "QUICK VIEW" label on hover */
 .product-card__image::after {
   content: "QUICK VIEW";
   position: absolute;
-  bottom: 16px;
-  left: 50%;
-  transform: translateX(-50%) translateY(20px);
-  background: rgba(6, 6, 6, 0.9);
-  backdrop-filter: blur(10px);
-  padding: 10px 24px;
-  font-size: 0.55rem;
-  font-weight: 700;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: var(--accent);
+  color: #000;
+  padding: 12px 0;
+  text-align: center;
+  font-size: 0.6rem;
+  font-weight: 900;
   letter-spacing: 0.25em;
-  border: 1px solid var(--accent);
-  color: var(--accent);
-  opacity: 0;
-  transition:
-    opacity 0.4s ease,
-    transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  transform: translateY(100%);
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
   pointer-events: none;
   z-index: 2;
 }
 .product-card:hover .product-card__image::after {
-  opacity: 1;
-  transform: translateX(-50%) translateY(0);
+  transform: translateY(0);
 }
 .product-card__info {
   padding: 20px 20px 24px;
@@ -557,12 +610,18 @@ ul { list-style: none; }
   letter-spacing: 0.15em;
   margin-bottom: 8px;
   color: var(--white);
+  transition: color 0.3s;
 }
 .product-card__info p {
   font-size: 0.7rem;
   color: var(--accent-dim);
   font-weight: 600;
   letter-spacing: 0.08em;
+  transition: color 0.3s;
+}
+.product-card:hover .product-card__info h3,
+.product-card:hover .product-card__info p {
+  color: #000;
 }
 
 /* ===================================
@@ -821,4 +880,89 @@ ul { list-style: none; }
     grid-template-columns: repeat(2, 1fr);
     gap: 12px;
   }
+}
+
+/* ===================================
+   INSANE FRONTEND UTILITIES
+   =================================== */
+.blinking-cursor {
+  animation: blink 1s step-start infinite;
+}
+@keyframes blink {
+  50% { opacity: 0; }
+}
+
+.crt-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 10000;
+  pointer-events: none;
+  background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%);
+  background-size: 100% 4px;
+  opacity: 0.6;
+}
+.crt-overlay::after {
+  content: " ";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: rgba(18, 16, 16, 0.1);
+  opacity: 0;
+  z-index: 10000;
+  pointer-events: none;
+  animation: flicker 0.15s infinite;
+}
+@keyframes flicker {
+  0% { opacity: 0.08; }
+  50% { opacity: 0.02; }
+  100% { opacity: 0.08; }
+}
+
+.glitch-text {
+  position: relative;
+  display: inline-block;
+}
+.glitch-text::before,
+.glitch-text::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+.glitch-text::before {
+  left: 3px;
+  text-shadow: -2px 0 var(--accent);
+  clip: rect(24px, 1550px, 90px, 0);
+  animation: glitch-anim-1 2.5s infinite linear alternate-reverse;
+  z-index: -1;
+}
+.glitch-text::after {
+  left: -3px;
+  text-shadow: -2px 0 red;
+  clip: rect(85px, 1550px, 140px, 0);
+  animation: glitch-anim-2 3s infinite linear alternate-reverse;
+  z-index: -2;
+}
+
+@keyframes glitch-anim-1 {
+  0% { clip: rect(10px, 9999px, 83px, 0); }
+  20% { clip: rect(61px, 9999px, 33px, 0); }
+  40% { clip: rect(100px, 9999px, 12px, 0); }
+  60% { clip: rect(48px, 9999px, 56px, 0); }
+  80% { clip: rect(13px, 9999px, 98px, 0); }
+  100% { clip: rect(74px, 9999px, 20px, 0); }
+}
+@keyframes glitch-anim-2 {
+  0% { clip: rect(42px, 9999px, 83px, 0); }
+  20% { clip: rect(11px, 9999px, 33px, 0); }
+  40% { clip: rect(40px, 9999px, 12px, 0); }
+  60% { clip: rect(88px, 9999px, 56px, 0); }
+  80% { clip: rect(33px, 9999px, 98px, 0); }
+  100% { clip: rect(64px, 9999px, 20px, 0); }
 }

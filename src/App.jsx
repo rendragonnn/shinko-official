@@ -17,6 +17,8 @@ import SizeGuide from './pages/SizeGuide';
 import Shipping from './pages/Shipping';
 import Returns from './pages/Returns';
 import Campaigns from './pages/Campaigns';
+import Checkout from './pages/Checkout';
+import NotFound from './pages/NotFound';
 
 // Scrolls to top on every route change
 function ScrollToTop() {
@@ -50,28 +52,31 @@ function App() {
   }, []);
 
   return (
-    <Router>
-      <ScrollToTop />
-      <CartProvider>
-        <Layout>
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/collection" element={<Collection />} />
-            <Route path="/new-arrival" element={<NewArrival />} />
-            <Route path="/lookbook" element={<Lookbook />} />
-            <Route path="/product/:id" element={<ProductDetail />} />
-            <Route path="/cart" element={<Cart />} />
-            <Route path="/story" element={<Story />} />
-            <Route path="/contact" element={<Contact />} />
-            <Route path="/size-guide" element={<SizeGuide />} />
-            <Route path="/shipping" element={<Shipping />} />
-            <Route path="/returns" element={<Returns />} />
-            <Route path="/campaigns" element={<Campaigns />} />
-            <Route path="*" element={<Home />} />
-          </Routes>
-        </Layout>
-      </CartProvider>
-    </Router>
+    <>
+      <Router>
+        <ScrollToTop />
+        <CartProvider>
+          <Layout>
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/collection" element={<Collection />} />
+              <Route path="/new-arrival" element={<NewArrival />} />
+              <Route path="/lookbook" element={<Lookbook />} />
+              <Route path="/product/:id" element={<ProductDetail />} />
+              <Route path="/cart" element={<Cart />} />
+              <Route path="/story" element={<Story />} />
+              <Route path="/contact" element={<Contact />} />
+              <Route path="/size-guide" element={<SizeGuide />} />
+              <Route path="/shipping" element={<Shipping />} />
+              <Route path="/returns" element={<Returns />} />
+              <Route path="/campaigns" element={<Campaigns />} />
+              <Route path="/checkout" element={<Checkout />} />
+              <Route path="*" element={<NotFound />} />
+            </Routes>
+          </Layout>
+        </CartProvider>
+      </Router>
+    </>
   );
 }
 

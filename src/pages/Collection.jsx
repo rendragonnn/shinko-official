@@ -2,38 +2,11 @@ import React, { useState, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { motion, useInView } from 'framer-motion';
 import { PRODUCTS } from '../lib/data';
+import ProductCard from '../components/ProductCard';
 
 const CATEGORIES = ['All', 'Tops', 'Bottoms', 'Outerwear', 'Accessories'];
 
-function ProductCard({ product, index }) {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: "-60px" });
-  return (
-    <motion.div ref={ref}
-      initial={{ opacity: 0, y: 40 }}
-      animate={isInView ? { opacity: 1, y: 0 } : {}}
-      transition={{ duration: 0.7, delay: (index % 4) * 0.08, ease: [0.16, 1, 0.3, 1] }}
-    >
-      <Link to={`/product/${product.id}`} className="product-card">
-        <div className="product-card__image">
-          <img src={product.image} alt={product.name} loading="lazy" />
-          {product.isNew && (
-            <span style={{
-              position: 'absolute', top: '12px', left: '12px',
-              background: 'var(--accent)', color: '#000', padding: '4px 10px',
-              fontSize: '0.55rem', fontWeight: 800, letterSpacing: '0.15em',
-              borderRadius: '2px', zIndex: 2
-            }}>NEW</span>
-          )}
-        </div>
-        <div className="product-card__info">
-          <h3>{product.name}</h3>
-          <p>{product.priceDisplay}</p>
-        </div>
-      </Link>
-    </motion.div>
-  );
-}
+
 
 export default function Collection() {
   const [activeCategory, setActiveCategory] = useState('All');

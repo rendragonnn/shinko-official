@@ -2,6 +2,7 @@ import React, { useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { motion, useScroll, useTransform, useInView } from 'framer-motion';
 import { PRODUCTS } from '../lib/data';
+import ProductCard from '../components/ProductCard';
 
 function RevealSection({ children, className, style, delay = 0 }) {
   const ref = useRef(null);
@@ -20,37 +21,7 @@ function RevealSection({ children, className, style, delay = 0 }) {
   );
 }
 
-function ProductCard({ product, index }) {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: "-80px" });
 
-  return (
-    <motion.div
-      ref={ref}
-      initial={{ opacity: 0, y: 50 }}
-      animate={isInView ? { opacity: 1, y: 0 } : {}}
-      transition={{ duration: 0.8, delay: index * 0.1, ease: [0.16, 1, 0.3, 1] }}
-    >
-      <Link to={`/product/${product.id}`} className="product-card">
-        <div className="product-card__image">
-          <img src={product.image} alt={product.name} loading="lazy" />
-          {product.isNew && (
-            <span style={{
-              position: 'absolute', top: '12px', left: '12px',
-              background: 'var(--accent)', color: '#000', padding: '4px 10px',
-              fontSize: '0.55rem', fontWeight: 800, letterSpacing: '0.15em',
-              borderRadius: '2px', zIndex: 2
-            }}>NEW</span>
-          )}
-        </div>
-        <div className="product-card__info">
-          <h3>{product.name}</h3>
-          <p>{product.priceDisplay}</p>
-        </div>
-      </Link>
-    </motion.div>
-  );
-}
 
 export default function Home() {
   const heroRef = useRef(null);
@@ -64,73 +35,43 @@ export default function Home() {
 
   return (
     <>
-      {/* ========== HERO ========== */}
-      <section id="hero" className="hero" ref={heroRef}>
-        <div className="hero__bg">
-          <motion.img
-            style={{ scale: heroScale }}
-            src="/images/hero.png"
-            alt="SHINKO Campaign"
-          />
-          <div className="hero__overlay"></div>
+      {/* ========== BENTO HERO ========== */}
+      <section id="hero" style={{ paddingTop: '90px', minHeight: '100vh', display: 'flex', flexDirection: 'column', background: 'var(--bg-primary)' }}>
+        <div className="bento-grid bento-grid--hero" style={{ flex: 1, margin: '0 var(--side-pad)', borderRight: '1px solid var(--grey-dark)' }}>
+          <div className="bento-cell bento-cell--dark" style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
+            <motion.div initial={{ opacity: 0, x: -40 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.8 }}>
+              <p style={{ fontSize: '0.65rem', color: 'var(--accent)', letterSpacing: '0.5em', marginBottom: '24px' }}>DROP 001 // SS26</p>
+              <h1 style={{ fontSize: 'clamp(3rem, 7vw, 120px)', fontWeight: 900, lineHeight: 0.9, letterSpacing: '-0.04em', textTransform: 'uppercase' }}>
+                SHINKO<br/>OFFICIAL<br/>
+                <span style={{ color: 'transparent', WebkitTextStroke: '2px var(--accent)' }}>IDENTITY.</span>
+              </h1>
+            </motion.div>
+            
+            <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.6, duration: 0.8 }} style={{ marginTop: '40px' }}>
+              <p style={{ maxWidth: '400px', fontSize: '0.8rem', color: 'var(--white)', lineHeight: 1.6, marginBottom: '32px' }}>
+                Born from the streets. A premium label for those who refuse to blend in. Uncompromising aesthetic.
+              </p>
+              <Link to="/collection" className="hero__cta" style={{ border: '1px solid var(--accent)', background: 'var(--bg-primary)', color: 'var(--accent)' }}>SHOP COLLECTION</Link>
+            </motion.div>
+          </div>
+          
+          <div className="bento-cell bento-cell--image">
+            <motion.div style={{ width: '100%', height: '100%', position: 'relative' }} initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1.2 }}>
+              <img src="/images/hero.png" alt="Campaign" style={{ width: '100%', height: '100%', objectFit: 'cover', filter: 'contrast(1.1) grayscale(0.3)' }} />
+              <div style={{ position: 'absolute', top: '24px', right: '24px', background: 'var(--accent)', color: '#000', padding: '12px 24px', fontSize: '0.6rem', fontWeight: 900, letterSpacing: '0.2em' }}>
+                LIVE NOW
+              </div>
+            </motion.div>
+          </div>
         </div>
-        <motion.div className="hero__content" style={{ opacity: heroOpacity }}>
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.3, duration: 1 }}
-            className="hero__pre"
-          >
-            SS26 COLLECTION
-          </motion.p>
-          <h1 className="hero__title">
-            <motion.span
-              initial={{ opacity: 0, y: 80 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.5, duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
-            >SHINKO</motion.span>
-            <motion.span
-              initial={{ opacity: 0, y: 80 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.7, duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
-            >OFFICIAL</motion.span>
-          </h1>
-          <motion.p
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 1.1 }}
-            className="hero__tagline"
-          >
-            DEFINE YOUR IDENTITY
-          </motion.p>
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 1.3, duration: 0.8 }}
-          >
-            <Link to="/collection" className="hero__cta">SHOP COLLECTION</Link>
-          </motion.div>
-        </motion.div>
-        <motion.div
-          className="hero__scroll-indicator"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 2 }}
-        >
-          <span>SCROLL</span>
-          <div className="hero__scroll-line"></div>
-        </motion.div>
       </section>
 
-      {/* ========== MARQUEE ========== */}
+      {/* ========== MARQUEE BRUTAL ========== */}
       <div className="marquee">
-        <div className="marquee__track">
-          {[...Array(3)].map((_, i) => (
+        <div className="marquee__track" style={{ borderTop: '1px solid var(--grey-dark)', borderBottom: '1px solid var(--grey-dark)', background: 'var(--accent)', color: '#000', padding: '8px 0', fontSize: '1.2rem', fontWeight: 900 }}>
+          {[...Array(4)].map((_, i) => (
             <React.Fragment key={i}>
-              <span>SHINKO OFFICIAL</span><span style={{ color: 'var(--accent)' }}>★</span>
-              <span>DEFINE YOUR IDENTITY</span><span style={{ color: 'var(--accent)' }}>★</span>
-              <span>SS26 COLLECTION</span><span style={{ color: 'var(--accent)' }}>★</span>
-              <span>PREMIUM STREETWEAR</span><span style={{ color: 'var(--accent)' }}>★</span>
+              <span>SHINKO OFFICIAL // NO COMPROMISE // DEFINE YOUR IDENTITY // </span>
             </React.Fragment>
           ))}
         </div>
